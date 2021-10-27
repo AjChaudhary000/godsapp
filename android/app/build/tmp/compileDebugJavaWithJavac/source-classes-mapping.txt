@@ -1,0 +1,14 @@
+com/gods/ReactNativeFlipper.java
+ com.gods.ReactNativeFlipper
+ com.gods.ReactNativeFlipper$1
+ com.gods.ReactNativeFlipper$2
+ com.gods.ReactNativeFlipper$2$1
+com/gods/MainActivity.java
+ com.gods.MainActivity
+com/gods/BuildConfig.java
+ com.gods.BuildConfig
+com/gods/MainApplication.java
+ com.gods.MainApplication
+ com.gods.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
