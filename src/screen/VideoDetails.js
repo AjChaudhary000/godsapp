@@ -3,9 +3,10 @@ import { View, Image, StyleSheet, FlatList, TouchableOpacity, Text, Dimensions, 
 import stylecolor from '../assets/styles/stylecolor';
 import Header from '../component/header';
 import Share1 from 'react-native-share';
+import Video from 'react-native-video';
 import RNFS from 'react-native-fs';
 
-function ImageDetails({ navigation }) {
+function VideoDetails({ navigation }) {
     const images = [
         {
             image: "https://source.unsplash.com/1024x768/?nature"
@@ -40,7 +41,7 @@ function ImageDetails({ navigation }) {
     ];
 
     const scrollX = useRef(new Animated.Value(0)).current;
-    const phoneStorageDir = `${RNFS.DocumentDirectoryPath}/advait/images/`;
+    const phoneStorageDir = `${RNFS.DocumentDirectoryPath}/advait/videos/`;
     const download = () => {
         console.log(phoneStorageDir);
         RNFS.mkdir(phoneStorageDir).then((success) => {
@@ -50,10 +51,10 @@ function ImageDetails({ navigation }) {
         });
 
         RNFS.downloadFile({
-            fromUrl: 'https://facebook.github.io/react-native/img/header_logo.png',
-            toFile: `${RNFS.DocumentDirectoryPath}/react-native.png`,
+            fromUrl: 'https://media.istockphoto.com/videos/elementary-school-kids-run-from-camera-in-school-corridor-video-id1071486906',
+            toFile: `${RNFS.phoneStorageDir}/react-native.mp4`,
           }).promise.then((r) => {
-            console.log(r.statusCode)
+            console.log(r)
           });
         RNFS.readDir(phoneStorageDir)
             .then((result) => {
@@ -72,7 +73,7 @@ function ImageDetails({ navigation }) {
     }
     const shareOptionswhatsapp = {
         title: 'Gods Status ',
-        url: `file://${phoneStorageDir}81.png`,
+        url: `file://${phoneStorageDir}react-native.mp4`,
         social: Share1.Social.WHATSAPP,
         message: '89_Sudha_dekho_dekho.png',
         // only for base64 file in Android
@@ -99,17 +100,16 @@ function ImageDetails({ navigation }) {
             <Header navigation={navigation} textname={""} />
             <View style={{ alignSelf: 'center' }}>
                 <FlatList data={images} numColumns={1} renderItem={(item) => (
-                    <TouchableOpacity style={styles.imagelist}>
-                        <View >
-                            <Image style={styles.img} source={{
-          uri: `file://${phoneStorageDir}81.png`,
-          scale: 1
-        }} /> 
+                    <TouchableOpacity style={styles.imagelist} >
+                        <View>
+                          
+        <Video source={{uri:'https://media.istockphoto.com/videos/elementary-school-kids-run-from-camera-in-school-corridor-video-id1071486906'}}            
+               style={styles.img}  audioOnly={true} duration={0}/>
                         </View>
-                        <Text>{`file://${phoneStorageDir}81.png`}</Text>
+                        {/* <Text>{`file://${phoneStorageDir}react-native.mp4`}</Text> */}
                     </TouchableOpacity>)}
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
+                    
+                    showsVerticalScrollIndicator={false}
                     pagingEnabled
                     bounces={false}
 
@@ -173,20 +173,20 @@ function ImageDetails({ navigation }) {
         </View>
     );
 }
-export default ImageDetails;
+export default VideoDetails;
 const styles = StyleSheet.create({
     content: {
         flex: 1,
         backgroundColor: stylecolor.backgraoundcolor
     },
     imagelist: {
-        margin: 5,
+        margin: 0,
 
     },
     img: {
-        width: Dimensions.get('window').width - 10,
-        height: Dimensions.get('window').height - 180,
-        borderRadius: 10,
+        width: Dimensions.get('window').width ,
+        height: Dimensions.get('window').height,
+       
 
     },
     footer: {

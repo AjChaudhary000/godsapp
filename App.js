@@ -6,6 +6,7 @@ import LottieView from 'lottie-react-native';
 import HomeScreen from './src/screen/HomeScreen';
 import TabScreen from './src/screen/Tabs/TabScreen';
 import ImageDetails from './src/screen/ImageDetails';
+import VideoDetails from './src/screen/VideoDetails';
 const Stack = createNativeStackNavigator();
 const  App =()=>{
   const [isLoading,setLoading] = React.useState(true);
@@ -29,6 +30,7 @@ return(
       <Stack.Screen name="Home" component={HomeScreen} options={{headerShown:false}}/>
       <Stack.Screen name="Tab" component={TabScreen} options={{headerShown:false}}/>
       <Stack.Screen name="ImageDetails" component={ImageDetails} options={{headerShown:false}}/>
+      <Stack.Screen name="VideoDetails" component={VideoDetails} options={{headerShown:false}}/>
     </Stack.Navigator>
   </NavigationContainer>
 );

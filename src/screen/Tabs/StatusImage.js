@@ -42,7 +42,7 @@ function StatusImage({navigation}) {
                 <FlatList data={images} numColumns={2} renderItem={(item)=>(
                     <TouchableOpacity style={styles.imagelist} onPress={()=>navigation.navigate("ImageDetails")}>
                 <View >
-                    <Image style={styles.img} source={{uri:'https://source.unsplash.com/1024x768/?tree'}} />
+                    <Image style={styles.img} source={{uri:'https://media.istockphoto.com/videos/lombok-waterfall-video-id135931235?s=640x640'}} />
                 </View>  
                 </TouchableOpacity> )}  showsVerticalScrollIndicator={false}/>
             </View>
