@@ -14,11 +14,10 @@
 
 
 ## AJRadioButton Component
-Animated radio buttons component for react native
-4 types animation when click on any items of radio button
+A radio button or option button is a graphical control element that allows the user to choose only one of a predefined set of mutually exclusive options.
 # DEMO
 
-
+https://snack.expo.dev/@arjun_jaat000/ajradiobutton
 ------------------------------------------------------------
 # Usage
     import {AJRadioButton} from 'r eact-native-ajui';
