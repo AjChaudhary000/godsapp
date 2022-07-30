@@ -6,29 +6,30 @@
 
 1. [AJRadioButton](#ajradiobutton-component)
 2. [AJCheckBox](#ajcheckbox-component)
-3. [AJSingleSelection](#systemmessage-component)
-4. [AJMultiSelection](#messagelist-component)
-6. [AJSwitch](#input-component)
-7. [AJToggleSwitch](#button-component)
-8. [AJMutiDropDown](#popup-component)
-9. [AJDropDown](#chatlist-component)
+3. [AJSingleSelection](#ajsingleselection-component)
+4. [AJMultiSelection](#ajmultiselection-component)
+6. [AJSwitch](#ajswitch-component)
+7. [AJToggleSwitch](#ajtoggleswitch-component)
+8. [AJDropDown](#ajdropdown-component)
 
 
 ## AJRadioButton Component
 Animated radio buttons component for react native
 4 types animation when click on any items of radio button
 # DEMO
+
+
 ------------------------------------------------------------
 # Usage
-    import {AJRadioButton} from 'react-native-ajui';
+    import {AJRadioButton} from 'r eact-native-ajui';
     const data = [
     { name: "Male", value: "male" }, 
     { name: "Female", value: "female" }, 
     { name: "Other", value: "other" }
-    ]   
-      <AJRadioButton
-        data={data}
-        OnSelectValue={(e) => console.log(e)}
+    ]    
+      <AJ RadioButton
+        da ta={data}
+        OnS electValue={(e) => console.log(e)}
       />
 
 # Properties
@@ -36,21 +37,11 @@ Animated radio buttons component for react native
 | Prop  | Description | Default |
 | ------------- | ------------- | ------------- |
 | data  | radio buttons label array, you can use any data in object, label is necessary for showing in radio button | [] |
-| selectedBtn  | callback when radio button clicked | - |
-| icon  | you can use any icon for button, see the example | - |
-| box  | box of for items  | true |
-| initial  | The number of selected radio button. start from 1 for first item of array. This is used when this component is activated. | -1 |
-| animationTypes  | the animations when click on item, Valid values: 'zoomIn', 'pulse', 'shake', 'rotate', you can use one or more of this value for exaple: ['pulse'] or ['pulse', 'rotate']  | [] |
-| duration  | For how long the animation will run (milliseconds) | 500 |
-| style  | style for all RadioButtonRN  | {} |
-| boxStyle  | style for box  | {} |
-| textStyle  | style for label text  | {} |
-| circleSize  | circle size for unselected items and whitout icon selected size | 18 |
-| activeColor  | color of active button and box border  | '#03a9f4' |
-| deactiveColor  | color of deactive button  | '#e2e2e2' |
-| boxActiveBgColor  | background color of active item, when box is true | '#e1f5fe33' |
-| boxDeactiveBgColor  | background color of deactive items, when box is true  | '#fff' |
-| textColor  | label color  | '#383838' |
+| tintColor  | callback when radio button clicked | - |
+| borderColor  | you can use any icon for button, see the example | - |
+| componentStyles  | box of for items  | true |
+| OnSelectValue  | The number of selected radio button. start from 1 for first item of array. This is used when this component is activated. | -1 |
+
 
 
 
@@ -76,18 +67,219 @@ Animated radio buttons component for react native
 | Prop  | Description | Default |
 | ------------- | ------------- | ------------- |
 | data  | radio buttons label array, you can use any data in object, label is necessary for showing in radio button | [] |
-| selectedBtn  | callback when radio button clicked | - |
-| icon  | you can use any icon for button, see the example | - |
-| box  | box of for items  | true |
-| initial  | The number of selected radio button. start from 1 for first item of array. This is used when this component is activated. | -1 |
-| animationTypes  | the animations when click on item, Valid values: 'zoomIn', 'pulse', 'shake', 'rotate', you can use one or more of this value for exaple: ['pulse'] or ['pulse', 'rotate']  | [] |
-| duration  | For how long the animation will run (milliseconds) | 500 |
-| style  | style for all RadioButtonRN  | {} |
-| boxStyle  | style for box  | {} |
-| textStyle  | style for label text  | {} |
-| circleSize  | circle size for unselected items and whitout icon selected size | 18 |
-| activeColor  | color of active button and box border  | '#03a9f4' |
-| deactiveColor  | color of deactive button  | '#e2e2e2' |
-| boxActiveBgColor  | background color of active item, when box is true | '#e1f5fe33' |
-| boxDeactiveBgColor  | background color of deactive items, when box is true  | '#fff' |
-| textColor  | label color  | '#383838' |
+| tintColor  | callback when radio button clicked | - |
+| borderColor  | you can use any icon for button, see the example | - |
+| componentStyles  | box of for items  | true |
+| OnSelectValue  | The number of selected radio button. start from 1 for first item of array. This is used when this component is activated. | -1 |
+
+
+  
+  
+## AJSingleSelection Component
+Animated radio buttons component for react native
+4 types animation when click on any items of radio button
+# DEMO
+------------------------------------------------------------
+# Usage
+    import {AJSingleSelection} from 'react-native-ajui';
+    const data = [
+    { name: "Male", value: "male" }, 
+    { name: "Female", value: "female" }, 
+    { name: "Other", value: "other" }
+    ]   
+      <AJSingleSelection
+        data={data}
+        OnSelectValue={(e) => console.log(e)}
+      />
+
+# Properties
+
+| Prop  | Description | Default |
+| ------------- | ------------- | ------------- |
+| data  | radio buttons label array, you can use any data in object, label is necessary for showing in radio button | [] |
+| tintColor  | callback when radio button clicked | - |
+| borderColor  | you can use any icon for button, see the example | - |
+| componentStyles  | box of for items  | true |
+| OnSelectValue  | The number of selected radio button. start from 1 for first item of array. This is used when this component is activated. | -1 |
+
+ 
+  
+   
+   
+## AJMultiSelection Component
+Animated radio buttons component for react native
+4 types animation when click on any items of radio button
+# DEMO
+------------------------------------------------------------
+# Usage
+    import {AJMultiSelection} from 'react-native-ajui';
+    const data = [
+    { name: "Male", value: "male" }, 
+    { name: "Female", value: "female" }, 
+    { name: "Other", value: "other" }
+    ]   
+      <AJMultiSelection
+        data={data}
+        OnSelectValue={(e) => console.log(e)}
+      />
+
+# Properties
+
+| Prop  | Description | Default |
+| ------------- | ------------- | ------------- |
+| data  | radio buttons label array, you can use any data in object, label is necessary for showing in radio button | [] |
+| tintColor  | callback when radio button clicked | - |
+| borderColor  | you can use any icon for button, see the example | - |
+| componentStyles  | box of for items  | true |
+| OnSelectValue  | The number of selected radio button. start from 1 for first item of array. This is used when this component is activated. | -1 |
+
+ 
+  
+   
+   
+## AJSwitch Component
+Animated radio buttons component for react native
+4 types animation when click on any items of radio button
+# DEMO
+------------------------------------------------------------
+# Usage
+    import {AJSwitch} from 'react-native-ajui';
+    const data = [
+    { name: "Male", value: "male" }, 
+    { name: "Female", value: "female" }, 
+    { name: "Other", value: "other" }
+    ]   
+      <AJSwitch
+        data={data}
+        OnSelectValue={(e) => console.log(e)}
+      />
+
+# Properties
+
+| Prop  | Description | Default |
+| ------------- | ------------- | ------------- |
+| data  | radio buttons label array, you can use any data in object, label is necessary for showing in radio button | [] |
+| tintColor  | callback when radio button clicked | - |
+| borderColor  | you can use any icon for button, see the example | - |
+| componentStyles  | box of for items  | true |
+| OnSelectValue  | The number of selected radio button. start from 1 for first item of array. This is used when this component is activated. | -1 |
+
+ 
+  
+  
+## AJToggleSwitch Component
+Animated radio buttons component for react native
+4 types animation when click on any items of radio button
+# DEMO
+------------------------------------------------------------
+# Usage
+    import {AJToggleSwitch} from 'react-native-ajui';
+    const data = [
+    { name: "Male", value: "male" }, 
+    { name: "Female", value: "female" }, 
+    { name: "Other", value: "other" }
+    ]   
+      <AJToggleSwitch
+        data={data}
+        OnSelectValue={(e) => console.log(e)}
+      />
+
+# Properties
+
+| Prop  | Description | Default |
+| ------------- | ------------- | ------------- |
+| data  | radio buttons label array, you can use any data in object, label is necessary for showing in radio button | [] |
+| tintColor  | callback when radio button clicked | - |
+| borderColor  | you can use any icon for button, see the example | - |
+| componentStyles  | box of for items  | true |
+| OnSelectValue  | The number of selected radio button. start from 1 for first item of array. This is used when this component is activated. | -1 |
+
+ 
+  
+   
+   
+## AJCheckBox Component
+Animated radio buttons component for react native
+4 types animation when click on any items of radio button
+# DEMO
+------------------------------------------------------------
+# Usage
+    import {AJRadioButton} from 'react-native-ajui';
+    const data = [
+    { name: "Male", value: "male" }, 
+    { name: "Female", value: "female" }, 
+    { name: "Other", value: "other" }
+    ]   
+      <AJRadioButton
+        data={data}
+        OnSelectValue={(e) => console.log(e)}
+      />
+
+# Properties
+
+| Prop  | Description | Default |
+| ------------- | ------------- | ------------- |
+| data  | radio buttons label array, you can use any data in object, label is necessary for showing in radio button | [] |
+| tintColor  | callback when radio button clicked | - |
+| borderColor  | you can use any icon for button, see the example | - |
+| componentStyles  | box of for items  | true |
+| OnSelectValue  | The number of selected radio button. start from 1 for first item of array. This is used when this component is activated. | -1 |
+
+ 
+ 
+## AJCheckBox Component
+Animated radio buttons component for react native
+4 types animation when click on any items of radio button
+# DEMO
+------------------------------------------------------------
+# Usage
+    import {AJRadioButton} from 'react-native-ajui';
+    const data = [
+    { name: "Male", value: "male" }, 
+    { name: "Female", value: "female" }, 
+    { name: "Other", value: "other" }
+    ]   
+      <AJRadioButton
+        data={data}
+        OnSelectValue={(e) => console.log(e)}
+      />
+
+# Properties
+
+| Prop  | Description | Default |
+| ------------- | ------------- | ------------- |
+| data  | radio buttons label array, you can use any data in object, label is necessary for showing in radio button | [] |
+| tintColor  | callback when radio button clicked | - |
+| borderColor  | you can use any icon for button, see the example | - |
+| componentStyles  | box of for items  | true |
+| OnSelectValue  | The number of selected radio button. start from 1 for first item of array. This is used when this component is activated. | -1 |
+
+
+## AJDropDown Component
+Animated radio buttons component for react native
+4 types animation when click on any items of radio button
+# DEMO
+------------------------------------------------------------
+# Usage
+    import {AJDropDown} from 'react-native-ajui';
+    const data = [
+    { name: "Male", value: "male" }, 
+    { name: "Female", value: "female" }, 
+    { name: "Other", value: "other" }
+    ]   
+      <AJDropDown
+        data={data}
+        OnSelectValue={(e) => console.log(e)}
+      />
+
+# Properties
+
+| Prop  | Description | Default |
+| ------------- | ------------- | ------------- |
+| data  | radio buttons label array, you can use any data in object, label is necessary for showing in radio button | [] |
+| tintColor  | callback when radio button clicked | - |
+| borderColor  | you can use any icon for button, see the example | - |
+| componentStyles  | box of for items  | true |
+| OnSelectValue  | The number of selected radio button. start from 1 for first item of array. This is used when this component is activated. | -1 |
+
+
